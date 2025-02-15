@@ -1,0 +1,35 @@
+#Llamado de datos 
+#Diseñó: Paola Samantha Alvarez Colín 
+
+#install.packages("pacman") #para instalar paquetes
+
+library("pacman") #llamar a los paquetes
+
+p_load("readr") #función dentro del paquete pacman para llamar otros paquetes y si no están instalados, los instalan 
+
+Datos_PCR <- read.csv(file="https://raw.githubusercontent.com/ManuelLaraMVZ/Transcript-mica/refs/heads/main/Resultados_tiempo_real.csv")
+head(Datos_PCR)
+View(Datos_PCR)
+
+#Magriter funciona con dplyr, es para asignar funciones 
+install.packages("dplyr")
+p_load("dplyr")
+
+Tabla_filtrada <- Datos_PCR %>% 
+  select("Ciclos","Cb")
+
+Tabla_filtrada
+
+#para hacer la gráfica se instala un paquete llamado ggplot2
+install.packages("ggplot2")
+p_load("ggplot2")
+ggplot(Tabla_filtrada, aes(x = Ciclos, y = Cb)) +
+  geom_line(color = "blue", size = 1) +  # Línea azul
+  geom_point(color = "pink", size = 2) +  # Puntos rojos
+  labs(title = "Curva de Amplificación qPCR",
+       subtitle = "Creó:Samantha Alvarez",
+       caption = "Muestra de cerebelo",
+       x = "Número de Ciclos",
+       y = "Fluorescencia") +
+  theme_minimal()
+  
