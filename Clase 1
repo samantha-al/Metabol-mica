@@ -1,0 +1,42 @@
+2+2
+3^2
+# la operación 2+2
+Mujeres <- 18
+Hombres <- 3
+Total <- Hombres + Mujeres
+Hombres + Mujeres
+
+##################
+
+CHO <- 535000
+Vero <- 1350000
+Total_celulas <- CHO + Vero
+Total_celulas
+
+#################
+
+x <- 35
+y <- 22
+Total_numeros <- x + y
+w <- "34"
+z <- "25"
+Total_caracteres <- w + z
+#como w y z son elementos no numéricos, no se puede realizar la operación
+x+y
+w+z
+
+#vectores
+
+Nombres <- c("Renta","Diego","Isa","Lidia")
+Altura <- c(1.63,1.80,1.67,1.48)
+Tabla1 <- data.frame(Nombres=Nombres, Altura=Altura)
+
+View(Tabla1) #para ver la tabla 
+head(Tabla1) #para visualizar los 6 primeros datos
+
+#####################
+
+Grupo <- c("perro","gato", "CHO", "Vero")
+Valores_vectorgrupo <- c(12,25,530000,1350000)
+Tabla2 <- data.frame (Grupo=Grupo, Valores_vectorgrupo=Valores_vectorgrupo)
+head(Tabla2)
