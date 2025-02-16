@@ -1,0 +1,8 @@
+# ejercicio dataframe metabolómica
+columna1 <- c("Falla sistema urinario", "Neoplasia", "Infeccioso", "Trauma", "Falla sistema cardiovascular", "Muerte súbita", "Cuerpo extraño")
+columna2 <- c(16,13,23,19,4,3,1)
+columna3 <- c(33,23,15,5,6,3,5)
+columna4 <- c(47,50,13,3,9,1,0)
+columna5 <- c(43,37,2,1,2,0,0)
+Tabla1 <- data.frame(`Motivo de muerte`=columna1, `0 a 4 años`=columna2, `5 a 9 años`=columna3, `10 14 años`=columna4, `15 años o más`=columna5)
+colnames(Tabla1) <- c("Motivo de muerte", "0 a 4 años", "5 a 9 años", "10 a 14 años", "15 años o más")
